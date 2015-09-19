@@ -3,8 +3,212 @@
 <head>
     <meta charset = "UTF-8">
     <title>鼠害一览 </title>
+    <style>
+        #mousePanelDiv {
+            background-color: silver;
+            width: 920px;
+            height: 500px;
+            margin-left: 0px;
+            margin-top: 0px;
+            /*圆角*/
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
+<div id = "mousePanelDiv">
+    <div class = "container-fluid">
+        <!--标题-->
+        <div class = "row-fluid">
+            <div class = "span12">
+                <h3 class = "text-center">
+                    鼠害一览
+                </h3>
+            </div>
+        </div>
+        <!--表格-->
+        <div class = "row-fluid">
+            <!--响应式表格 没用!!!-->
+            <div class = "span12 table-responsive">
+                <table class = "table table-hover table-condensed">
+                    <!--表格头-->
+                    <thead>
+                    <tr>
+                        <th>
+                            编号
+                        </th>
+                        <th>
+                            产品
+                        </th>
+                        <th>
+                            交付时间
+                        </th>
+                        <th>
+                            状态
+                        </th>
+                    </tr>
+                    </thead>
+                    <div style = "overflow-y: auto">
+                        <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                01/04/2012
+                            </td>
+                            <td>
+                                Default
+                            </td>
+                        </tr>
+                        <tr class = "success">
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                01/04/2012
+                            </td>
+                            <td>
+                                Approved
+                            </td>
+                        </tr>
+                        <tr class = "error">
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                02/04/2012
+                            </td>
+                            <td>
+                                Declined
+                            </td>
+                        </tr>
+                        <tr class = "warning">
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                03/04/2012
+                            </td>
+                            <td>
+                                Pending
+                            </td>
+                        </tr>
+                        <tr class = "info">
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                04/04/2012
+                            </td>
+                            <td>
+                                Call in to confirm
+                            </td>
+                        </tr>
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+        </div>
+        <!--分页按钮-->
+        <div class = "row-fluid">
+            <div class = "span12">
+                <div>
+                    <button id = "previousPage" class = "btn btn-sm" type = "button" style = "line-height:0px">
+                        <span class = "glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                    <input id = "pageNum" type = "text" style = "width: 40px;height: 20px" />
+                    <label>/10</label>
+                    <button id = "go" class = "btn btn-sm" type = "button" style = "line-height:0px">
+                        <span class = "glyphicon glyphicon-step-forward"></span>
+                    </button>
+                    <button id = "nextPage" class = "btn  btn-sm" type = "button" style = "line-height:0px">
+                        <span class = "glyphicon glyphicon-chevron-right"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <!--按钮-->
+        <div class = "row-fluid">
+            <div class = "col-xs-1 col-sm-2">
+                <button class = "btn" type = "button" onclick = "jumpMouseAdd()">添加新鼠害</button>
+            </div>
+            <div class = "col-xs-4 col-xs-offset-1 col-sm-2">
+                <button class = "btn" type = "button" onclick = "jumpMouseInfo()">查看详细信息</button>
+            </div>
+            <!--xs自动 lg>=1200px sm<=768px offset列移动-->
+            <div class = "col-xs-3 col-lg-6 col-sm-6 col-lg-offset-1 col-sm-offset-1">
+                <fieldset>
+                    <legend>查询鼠害信息</legend>
+                    <div class = "row" style = "margin-top: 20px">
+                        <div class = "form-group" style = "float: left">
+                            <label for = "name" class = "col-lg-4 col-sm-4   control-label ">名称:</label>
 
+                            <div class = "col-lg-8 col-sm-8">
+                                <input type = "text" class = "form-control" id = "name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-sm-offset-5">
+                            <button id = "search" type = "submit" class = "btn">查找</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //页面跳转
+    function jumpMouseAdd() {
+        $("#mousePanelDiv").load("html/mouseAdd.html");
+    }
+    function jumpMouseInfo() {
+        $("#mousePanelDiv").load("html/mouseInfo.html");
+    }
+
+    //数据有效性验证
+    $("#pageNum").keydown(function () {
+        //只能输入数字
+    });
+
+    //事件处理
+    $("#previousPage").click(function () {
+        //上一页点击事件
+        alert("上一页");
+    });
+    $("#nextPage").click(function () {
+        //下一页点击事件
+        alert("下一页");
+    });
+    $("#go").click(function () {
+        //跳转到指定页点击事件
+        var num = $("#pageNum").val();
+        alert(num);
+    });
+
+    //查询模块事件
+
+</script>
 </body>
 </html>

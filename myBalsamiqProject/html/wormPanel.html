@@ -18,6 +18,7 @@
     </style>
 </head>
 <body >
+
     <div id = "wormPanelDiv">
         <div class = "container-fluid">
             <!--标题-->
@@ -165,18 +166,18 @@
                                         <button id="selected" type = "button" class = "btn btn-default dropdown-toggle" data-toggle =
                                                 "dropdown">病害名<span class = "caret"></span><!--这个span的作用是提供一个下拉图标-->
                                         </button>
-                                        <ul class = "dropdown-menu">
+                                        <ul id="ul" class = "dropdown-menu">
                                             <li><a href = "javascript:void(0)">危害</a></li>
                                             <li><a href = "javascript:void(0)">发病症状</a></li>
                                         </ul>
                                     </div>
                                     <!-- /btn-group -->
-                                    <input type = "text" class = "form-control">
+                                    <input id="inputText" type = "text" class = "form-control">
                                 </div>
                                 <!-- /input-group -->
                             </div>
                             <div class = "col-xs-6 col-sm-6">
-                                <button type = "submit" class = "btn">查找</button>
+                                <button id="search" type = "submit" class = "btn">查找</button>
                             </div>
                         </div>
                     </fieldset>
@@ -213,6 +214,9 @@
             var num = $("#pageNum").val();
             alert(num);
         });
+
+        //查询模块事件
+
     </script>
 </body>
 </html>
