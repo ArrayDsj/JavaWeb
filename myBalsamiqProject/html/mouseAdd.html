@@ -42,24 +42,27 @@
                         </div>
                     </div>
                     <!--第三行-->
-                    <div class = "row" style = "margin-top: 20px;margin-left:-18px;">
-                        <div class = "form-group" style = "float: left">
-                            <label for = "img" class = "col-lg-4 col-sm-4  control-label ">图片:</label>
-
-                            <div class = "col-lg-8 col-sm-8">
+                    <div class = "row" style = "margin-top: 20px">
+                        <div class = "form-group">
+                            <div class = "col-lg-4 col-sm-4" style = "float: left;margin-left: 6px">
+                                <label for = "img" class = " control-label ">图片:</label>
+                            </div>
+                            <div class = "col-lg-4 col-sm-4" style = "float: left;margin-left: -50px">
                                 <input type = "file" class = "form-control" id = "img" style = "display: none">
-                                <input id = "inputImg" type = "text" class = "form-control" />
+                                <input id = "inputImg" type = "text" class = "form-control" style = "width: 150px" />
+                            </div>
+                            <div class = "col-lg-4 col-sm-4" style = "float: left;margin-left: 10px">
                                 <button class = "btn btn-default" onclick = "browseImg()">浏览</button>
                             </div>
                         </div>
                     </div>
                     <!--第四行-->
-                    <div class = "row" style = "margin-top: 20px;margin-left:-25px;">
+                    <div class = "row" style = "margin-top: 20px;margin-left:-45px;">
                         <div class = "form-group" style = "float: left">
-                            <label for = "action" class = "col-lg-4 col-sm-4 control-label ">防治措施:</label>
+                            <label for = "action" class = "col-lg-4 col-sm-4  control-label ">防治措施:</label>
 
-                            <div class = "col-lg-8 col-sm-8">
-                                <input type = "text" class = "form-control" id = "action">
+                            <div class = "col-lg-8 col-sm-6">
+                                <textarea rows = "5" cols = "30" class = "form-control" id = "action"></textarea>
                             </div>
                         </div>
                     </div>
@@ -88,11 +91,12 @@
                     </div>
                     <br /><br />
                     <!--第四行-->
-                    <div class = "row" style = "margin-top: 20px;margin-left:-25px;">
+                    <div class = "row" style = "margin-top: 50px;margin-left:-45px;">
                         <div class = "form-group" style = "float: left">
-                            <label for = "harm" class = "col-lg-4 col-sm-4 control-label ">主要危害:</label>
-                            <div class = "col-lg-8 col-sm-8">
-                                <input type = "text" class = "form-control" id = "harm">
+                            <label for = "harm" class = "col-lg-4 col-sm-4  control-label ">主要危害:</label>
+
+                            <div class = "col-lg-8 col-sm-6">
+                                <textarea rows = "5" cols = "30" class = "form-control" id = "harm"></textarea>
                             </div>
                         </div>
                     </div>

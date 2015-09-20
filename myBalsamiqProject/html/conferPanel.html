@@ -3,8 +3,145 @@
 <head>
     <meta charset = "UTF-8">
     <title>专家会商</title>
+    <style>
+        #conferPanelDiv {
+            background-color: silver;
+            width: 920px;
+            height: 500px;
+            margin-left: 0px;
+            margin-top: 0px;
+            /*圆角*/
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
+<div id = "conferPanelDiv">
+    <div class = "container-fluid">
+        <!--标题-->
+        <div class = "row-fluid">
+            <div class = "span12">
+                <h3 class = "text-center">
+                    专家会商
+                </h3>
+            </div>
+        </div>
+        <!--表格-->
+        <div class = "row-fluid">
+            <!--响应式表格 没用!!!-->
+            <div class = "span12 table-responsive">
+                <table class = "table table-hover table-condensed">
+                    <!--表格头-->
+                    <thead>
+                    <tr>
+                        <th>
+                            编号
+                        </th>
+                        <th>
+                            产品
+                        </th>
+                        <th>
+                            交付时间
+                        </th>
+                        <th>
+                            状态
+                        </th>
+                    </tr>
+                    </thead>
+                    <div style = "overflow-y: auto">
+                        <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                01/04/2012
+                            </td>
+                            <td>
+                                Default
+                            </td>
+                        </tr>
+                        <tr class = "success">
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                01/04/2012
+                            </td>
+                            <td>
+                                Approved
+                            </td>
+                        </tr>
+                        <tr class = "error">
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                02/04/2012
+                            </td>
+                            <td>
+                                Declined
+                            </td>
+                        </tr>
+                        <tr class = "warning">
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                03/04/2012
+                            </td>
+                            <td>
+                                Pending
+                            </td>
+                        </tr>
+                        <tr class = "info">
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                TB - Monthly
+                            </td>
+                            <td>
+                                04/04/2012
+                            </td>
+                            <td>
+                                Call in to confirm
+                            </td>
+                        </tr>
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+        </div>
+        <br /><br />
+        <!--按钮-->
+        <div class = "row-fluid">
+            <div class = "col-sm-offset-5">
+                <button class = "btn" type = "button" onclick = "jumpConferAdd()">专家会商</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<script>
+    //页面跳转
+    function jumpConferAdd() {
+        $("#conferPanelDiv").load("html/conferAdd.html");
+    }
+</script>
 </body>
 </html>

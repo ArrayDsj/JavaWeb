@@ -20,22 +20,155 @@
             <!--表单-->
             <form class = "form-horizontal" role = "form" action = "javascript:history.go(-1)" onsubmit = " return back()">
                 <!--左边-->
-                <div id = "left" style = "background-color: #255625;width: 370px;height: 390px;float: left">
-
-                </div>
-                <!--右边-->
-                <div id = "right" style = "background-color: royalblue;width: 370px;height: 390px;float: left;margin-left: 10px"></div>
-                <!--foot-->
-                <div id = "foot">
-                    <div class = "row">
-                        <div class = "form-group">
-                            <div class = "col-sm-offset-5 col-sm-5" style = "margin-top:10px">
-                                <button type = "submit" class = "btn btn-default">添加</button>
+                <div id = "left" style = "width: 370px;height: 290px;float: left">
+                    <!--第一行-->
+                    <div class = "row" style = "margin-top: 5px">
+                        <span class = "col-lg-4  control-label ">事件名称:</span>
+                        <span class = "col-lg-4  control-label ">XXXXXXX</span>
+                    </div>
+                    <!--第二行-->
+                    <div class = "row" style = "margin-top: 5px">
+                        <span class = "col-lg-4  control-label ">时间:</span>
+                        <span class = "col-lg-4  control-label ">xxxx-xx-xx</span>
+                    </div>
+                    <!--第三行-->
+                    <div class = "row" style = "margin-top:5px">
+                        <span class = "col-lg-4  control-label ">灾情阶段:</span>
+                        <span class = "col-lg-4  control-label ">xxxxxxxx</span>
+                    </div>
+                    <!--第四行-->
+                    <div class = "row" style = "margin-top: 5px">
+                        <span class = "col-lg-4  control-label ">灾情描述:</span>
+                        <span class = "col-lg-6 col-sm-10 control-label ">修剪清除枯叶危害,结茧的幼虫在成虫发生期用黑光灯诱杀,25%灭有说赶紧上课金额嗡嗡</span>
+                    </div>
+                    <!--第五行-->
+                    <div class = "row" style = "margin-top: 10px;margin-left:-45px;">
+                        <div class = "form-group" style = "float: left">
+                            <label for = "status" class = "col-lg-4 col-sm-4  control-label ">发病状态:</label>
+                            <div class = "col-lg-8 col-sm-6">
+                                <textarea rows = "3" cols = "30" class = "form-control" id = "status" ></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--右边-->
+                <div id = "right" style = "width: 370px;height: 290px;float: left;margin-left: 10px">
+                    <!--第一行-->
+                    <div class = "row" style = "margin-top: 5px">
+                        <span class = "col-lg-4  control-label ">幼虫图片:</span>
+                        <img src = "image/yworm.jpg" />
+                    </div>
+                    <!--第二行-->
+                    <div class = "row" style = "margin-top: 5px">
+                        <span class = "col-lg-4  control-label ">事件名称:</span>
+                        <span class = "col-lg-4  control-label ">XXXXXXX</span>
+                    </div>
+                    <!--第三行-->
+                    <div class = "row" style = "margin-top: 5px">
+                        <div class = "form-group" style = "float: left">
+                            <label for = "name" class = "col-lg-4 col-sm-4   control-label ">会商人员:</label>
+                            <div class = "col-lg-8 col-sm-8">
+                                <input type = "text" class = "form-control" id = "name">
+                            </div>
+                        </div>
+                    </div>
+                    <!--第四行-->
+                    <div class = "row">
+                        <div class = "form-group " style="margin-left: 100px">
+                            <button type = "submit" class = "btn btn-default">添加会商信息</button>
+                            <button type = "submit" class = "btn btn-default">返回</button>
+                        </div>
+                    </div>
+                </div>
             </form>
+        </div>
+        <!--foot-->
+        <div id = "foot" style = "width: 750px;height: 150px;margin-top: 300px;margin-left: 50px">
+            <!--表格-->
+            <div class = "row-fluid">
+                <!--响应式表格 没用!!!-->
+                <div class = "span12 table-responsive">
+                    <table class = "table table-hover table-condensed">
+                        <!--表格头-->
+                        <thead>
+                        <tr>
+                            <th>
+                                编号
+                            </th>
+                            <th>
+                                产品
+                            </th>
+                            <th>
+                                交付时间
+                            </th>
+                            <th>
+                                状态
+                            </th>
+                        </tr>
+                        </thead>
+                        <div style = "overflow-y: auto">
+                            <tbody>
+                            <tr class = "success">
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    TB - Monthly
+                                </td>
+                                <td>
+                                    01/04/2012
+                                </td>
+                                <td>
+                                    Approved
+                                </td>
+                            </tr>
+                            <tr class = "error">
+                                <td>
+                                    2
+                                </td>
+                                <td>
+                                    TB - Monthly
+                                </td>
+                                <td>
+                                    02/04/2012
+                                </td>
+                                <td>
+                                    Declined
+                                </td>
+                            </tr>
+                            <tr class = "warning">
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    TB - Monthly
+                                </td>
+                                <td>
+                                    03/04/2012
+                                </td>
+                                <td>
+                                    Pending
+                                </td>
+                            </tr>
+                            <tr class = "info">
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    TB - Monthly
+                                </td>
+                                <td>
+                                    04/04/2012
+                                </td>
+                                <td>
+                                    Call in to confirm
+                                </td>
+                            </tr>
+                            </tbody>
+                        </div>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
