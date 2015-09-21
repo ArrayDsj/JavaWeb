@@ -3,19 +3,6 @@
 <head>
     <meta charset = "UTF-8">
     <title>添加新害虫</title>
-    <!--<style type="text/css">-->
-        <!--#wormAddDiv {-->
-            <!--background-color: chartreuse;-->
-            <!--width: 920px;-->
-            <!--height: 500px;-->
-            <!--margin-left: 0px;-->
-            <!--margin-top: 0px;-->
-            <!--/*圆角*/-->
-            <!-&#45;&#45;webkit-border-radius: 4px;-->
-            <!-&#45;&#45;moz-border-radius: 4px;-->
-            <!--border-radius: 4px;-->
-        <!--}-->
-    <!--</style>-->
 </head>
 <body>
 
@@ -32,7 +19,8 @@
             <!--内容-->
             <div style = "margin-left:50px;margin-top: 10px">
                 <!--表单-->
-                <form class = "form-horizontal" role = "form" action = "javascript:history.go(-1)" onsubmit = " return back()">
+                <form class = "form-horizontal" role = "form" action = "javascript:jump('#wormPanelDiv','html/wormPanel.html')" onsubmit
+                        = "return add()">
                     <!--左边-->
                     <div id = "left" style = "width: 370px;height: 390px;float: left">
                         <!--第一行-->
@@ -64,7 +52,7 @@
                                     <input id = "inputSonImg" type = "text" class = "form-control" style = "width: 150px" />
                                 </div>
                                 <div class = "col-lg-4 col-sm-4" style = "float: left;margin-left: 10px">
-                                    <button class = "btn btn-default" onclick = "browseSon()">浏览</button>
+                                    <button class = "btn btn-default" onclick = "browseSon();return false">浏览</button>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +100,7 @@
                                     <input id = "inputBigImg" type = "text" class = "form-control" style = "width: 150px" />
                                 </div>
                                 <div class = "col-lg-4 col-sm-4" style = "float: left;margin-left: 10px">
-                                    <button class = "btn btn-default" onclick = "browseBig()">浏览</button>
+                                    <button class = "btn btn-default" onclick = "browseBig();return false">浏览</button>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +120,7 @@
                         <div class = "row">
                             <div class = "form-group">
                                 <div class = "col-sm-offset-5 col-sm-5" style = "margin-top:10px">
-                                    <button type = "submit" class = "btn btn-default">添加</button>
+                                    <button type = "submit" class = "btn btn-default" >添加</button>
                                 </div>
                             </div>
                         </div>
@@ -143,11 +131,13 @@
     </div>
 
     <script>
-        function back(){
-            //alert("111");
-//            window.history.back(-1);
+        //数据验证
+        function add(){
+            alert("验证数据正确性");
             return true;
         }
+
+
 
         function browseSon(){
             //调用文件选择组件的默认点击事件

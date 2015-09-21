@@ -21,7 +21,14 @@ $(function() {
         if (!e.data.multiple) {
             $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
         };
-	}	
+	}
 
 	var accordion = new Accordion($('#accordion'), false);
 });
+
+//所有页面的跳转方法
+function jump(id,url){
+    $(id).load(url);
+}
+
+

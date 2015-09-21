@@ -5,6 +5,7 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1">
     <title>森林病虫害防治系统</title>
     <link rel = "stylesheet" href = "bootstrap/css/bootstrap.min.css" />
+    <link rel = "stylesheet" href = "bootstrap/css/bootstrap-datetimepicker.min.css" />
     <link rel = "stylesheet" href = "css/index.css" />
 </head>
 <body>
@@ -19,96 +20,67 @@
                 <ul id = "accordion" class = "accordion">
                     <li style="font-size: 18px;text-align: center">森林病虫害防治系统</li>
                     <li>
-                        <div class = "link"><i class = "glyphicon glyphicon-star"></i>资料管理</div>
+                        <div class = "link"><i class = "glyphicon glyphicon-book"></i>资料管理</div>
                         <ul class = "submenu">
-                            <li><a href = "javascript:jumpWormPanel()">虫害一览</a></li>
-                            <li><a href = "javascript:jumpDiseasePanel()">病害一览</a></li>
-                            <li><a href = "javascript:jumpMousePanel()">鼠害一览</a></li>
+                            <li><a href = "javascript:void(0)" onclick="jump('#otherHtml','html/wormPanel.html')">虫害一览</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/diseasePanel.html')">病害一览</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/mousePanel.html')">鼠害一览</a></li>
                         </ul>
                     </li>
                     <li>
-                        <div class = "link"><i class = "glyphicon glyphicon-star"></i>灾情防治</div>
+                        <div class = "link"><i class = "glyphicon glyphicon-briefcase"></i>灾情防治</div>
                         <ul class = "submenu">
-                            <li><a href = "javascript:jumpAreaPanel()">区域一览</a></li>
-                            <li><a href = "javascript:jumpClassPanel()">小班管理</a></li>
-                            <li><a href = "javascript:jumpThingPanel()">事件记录</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/areaPanel.html')">区域一览</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/classPanel.html')">小班管理</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/thingPanel.html')">事件记录</a></li>
                         </ul>
                     </li>
                     <li>
-                        <div class = "link"><i class = "glyphicon glyphicon-star"></i>专家会商</div>
+                        <div class = "link"><i class = "glyphicon glyphicon-user"></i>专家会商</div>
                         <ul class = "submenu">
-                            <li><a href = "javascript:jumpProficientPanel()">专家一览</a></li>
-                            <li><a href = "javascript:jumpConferPanel()">会商灾情</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/proficientPanel.html')">专家一览</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/conferPanel.html')">会商灾情</a></li>
                         </ul>
                     </li>
                     <li>
-                        <div class = "link"><i class = "glyphicon glyphicon-star"></i>药剂器械出库管理</div>
+                        <div class = "link"><i class = "glyphicon glyphicon-cutlery"></i>药剂器械出库管理</div>
                         <ul class = "submenu">
-                            <li><a href = "javascript:jumpDrugPanel()">药剂管理</a></li>
-                            <li><a href = "javascript:jumpApparatusPanel()">器械管理</a></li>
-                            <li><a href = "javascript:jumpOutwarehousePanel()">出库管理</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/drugPanel.html')">药剂管理</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/apparatusPanel.html')">器械管理</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/outwarehousePanel.html')">出库管理</a></li>
                         </ul>
                     </li>
                     <li>
-                        <div class = "link"><i class = "glyphicon glyphicon-star"></i>系统信息</div>
+                        <div class = "link"><i class = "glyphicon glyphicon-comment"></i>系统信息</div>
                         <ul class = "submenu">
-                            <li><a href = "javascript:jumpUserPanel()">用户信息</a></li>
-                            <li><a href = "javascript:jumpLogs()">日志一览</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/userPanel.html')">用户信息</a></li>
+                            <li><a href = "javascript:void(0)" onclick = "jump('#otherHtml','html/logs.html')">日志一览</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
+
             <!--添加网页的地方-->
-            <div id = "otherHtml"></div>
+            <div id = "otherHtml">
+                <div style="float: left;height: 470px;width: 450px;margin-top: 10px;margin-left: 10px" >
+                    <img src = "image/2.jpg" width="380" height="220" style = "margin-top: 10px;margin-left: 60px"/>
+                    <img src = "image/4.jpg" width = "380" height = "220" style="margin-top: 10px;margin-left: 60px"/>
+                </div>
+                <div style = "float: left;height: 470px;width: 450px;margin-top: 10px">
+                    <img src = "image/2.jpg" width = "380" height = "220" style = "margin-top: 10px;margin-left: 30px" />
+                    <img src = "image/4.jpg" width = "380" height = "220" style = "margin-top: 10px;margin-left: 30px" />
+                </div>
+            </div>
+
+
         </div>
     </div>
-
     <script type = "text/javascript" src = "js/jquery-1.11.3.min.js"></script>
     <script type = "text/javascript" src = "bootstrap/js/bootstrap.min.js"></script>
+    <script type = "text/javascript" src = "bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+    <script type = "text/javascript" src = "bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
     <script type = "text/javascript" src = "js/index.js"></script>
-
-
     <script>
-        function jumpWormPanel() {
-            $("#otherHtml").load("html/wormPanel.html");
-        }
-        function jumpDiseasePanel() {
-            $("#otherHtml").load("html/diseasePanel.html");
-        }
-        function jumpMousePanel() {
-            $("#otherHtml").load("html/mousePanel.html");
-        }
-        function jumpAreaPanel() {
-            $("#otherHtml").load("html/areaPanel.html");
-        }
-        function jumpClassPanel() {
-            $("#otherHtml").load("html/classPanel.html");
-        }
-        function jumpThingPanel() {
-            $("#otherHtml").load("html/thingPanel.html");
-        }
-        function jumpProficientPanel() {
-            $("#otherHtml").load("html/proficientPanel.html");
-        }
-        function jumpConferPanel() {
-            $("#otherHtml").load("html/conferPanel.html");
-        }
-        function jumpDrugPanel() {
-            $("#otherHtml").load("html/drugPanel.html");
-        }
-        function jumpApparatusPanel() {
-            $("#otherHtml").load("html/apparatusPanel.html");
-        }
-        function jumpOutwarehousePanel() {
-            $("#otherHtml").load("html/outwarehousePanel.html");
-        }
-        function jumpUserPanel() {
-            $("#otherHtml").load("html/userPanel.html");
-        }
-        function jumpLogs() {
-            $("#otherHtml").load("html/logs.html");
-        }
-
     </script>
 </body>
 </html>

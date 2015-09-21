@@ -24,7 +24,8 @@
         <!--内容-->
         <div style = "margin-left:310px;margin-top: 10px">
             <!--表单-->
-            <form class = "form-horizontal" role = "form" action = "javascript:history.go(-1)" onsubmit = " return back()">
+            <form class = "form-horizontal" role = "form" action = "javascript:void(0)" onsubmit = "jump(
+            '#apparatusAddDiv','html/apparatusPanel.html')">
                 <div id = "body">
                     <!--第一行-->
                     <div class = "row" style = "margin-top: 20px">
@@ -65,9 +66,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <div id = "foot">
                     <div class = "row">
                         <div class = "form-group">

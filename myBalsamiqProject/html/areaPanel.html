@@ -5,11 +5,6 @@
     <title>区域一览</title>
     <style>
         #areaPanelDiv {
-            background-color: silver;
-            width: 920px;
-            height: 500px;
-            margin-left: 0px;
-            margin-top: 0px;
             /*圆角*/
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
@@ -29,104 +24,59 @@
             </div>
         </div>
         <!--表格-->
-        <div class = "row-fluid">
-            <!--响应式表格 没用!!!-->
-            <div class = "span12 table-responsive">
-                <table class = "table table-hover table-condensed">
-                    <!--表格头-->
-                    <thead>
+        <div class = "row-fluid" style = "border: solid">
+            <table class = "table table-hover">
+                <tr class = "active">
+                    <th class = "col-lg-3">日期</th>
+                    <th class = "col-lg-2">名称</th>
+                    <th class = "col-lg-3">主要用途</th>
+                    <th class = "col-lg-2">领用数量</th>
+                    <th class = "col-lg-2">领用小班</th>
+                </tr>
+            </table>
+
+            <div style = "overflow-y: auto;height: 100px;margin-top: -20px" class = "row-fluid" id = "tableTD">
+                <table class = "table table-hover">
                     <tr>
-                        <th>
-                            编号
-                        </th>
-                        <th>
-                            产品
-                        </th>
-                        <th>
-                            交付时间
-                        </th>
-                        <th>
-                            状态
-                        </th>
+                        <td class = "col-lg-3">2013-2-3</td>
+                        <td class = "col-lg-2">虫害</td>
+                        <td class = "col-lg-3">松鼠</td>
+                        <td class = "col-lg-2">87</td>
+                        <td class = "col-lg-2">领用小班</td>
                     </tr>
-                    </thead>
-                    <div style = "overflow-y: auto">
-                        <tbody>
-                        <tr>
-                            <td>
-                                1
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                01/04/2012
-                            </td>
-                            <td>
-                                Default
-                            </td>
-                        </tr>
-                        <tr class = "success">
-                            <td>
-                                1
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                01/04/2012
-                            </td>
-                            <td>
-                                Approved
-                            </td>
-                        </tr>
-                        <tr class = "error">
-                            <td>
-                                2
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                02/04/2012
-                            </td>
-                            <td>
-                                Declined
-                            </td>
-                        </tr>
-                        <tr class = "warning">
-                            <td>
-                                3
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                03/04/2012
-                            </td>
-                            <td>
-                                Pending
-                            </td>
-                        </tr>
-                        <tr class = "info">
-                            <td>
-                                4
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                04/04/2012
-                            </td>
-                            <td>
-                                Call in to confirm
-                            </td>
-                        </tr>
-                        </tbody>
-                    </div>
+                    <tr>
+                        <td>2013-2-3</td>
+                        <td>鼠害</td>
+                        <td>松鼠</td>
+                        <td>22</td>
+                        <td>领用小班</td>
+                    </tr>
+                    <tr>
+                        <td>2013-2-3</td>
+                        <td>虫害</td>
+                        <td>松毛虫</td>
+                        <td>32</td>
+                        <td>领用小班</td>
+                    </tr>
+                    <tr>
+                        <td>2013-2-3</td>
+                        <td>鼠害</td>
+                        <td>劫家鼠</td>
+                        <td>11</td>
+                        <td>领用小班</td>
+                    </tr>
+                    <tr>
+                        <td>2013-2-3</td>
+                        <td>鼠害</td>
+                        <td>劫家鼠</td>
+                        <td>17</td>
+                        <td>领用小班</td>
+                    </tr>
                 </table>
             </div>
+            </table>
         </div>
+        <br />
         <!--分页按钮-->
         <div class = "row-fluid">
             <div class = "span12">
@@ -149,7 +99,7 @@
         <!--按钮-->
         <div class = "row-fluid">
             <div class = "col-lg-3 col-sm-2 col-sm-offset-2">
-                <button class = "btn" type = "button" onclick = "jumpAreaAdd()">添加区域</button>
+                <button class = "btn" type = "button" onclick = "jump('#areaPanelDiv','html/areaAdd.html')">添加区域</button>
             </div>
 
             <!--xs自动 lg>=1200px sm<=768px offset列移动-->
@@ -186,11 +136,6 @@
 </div>
 
 <script>
-    //页面跳转
-    function jumpAreaAdd() {
-        $("#areaPanelDiv").load("html/areaAdd.html");
-    }
-
     //数据有效性验证
     $("#pageNum").keydown(function () {
         //只能输入数字

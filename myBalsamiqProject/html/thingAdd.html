@@ -5,7 +5,7 @@
     <title>添加事件</title>
 </head>
 <body>
-<div id = "diseaseInfoDiv">
+<div id = "thingAddDiv">
     <div class = "container-fluid">
         <!--标题-->
         <div class = "row-fluid">
@@ -17,7 +17,8 @@
         </div>
 
         <div style = "margin-left:50px;margin-top: 10px">
-            <form class = "form-horizontal" role = "form" action = "javascript:history.go(-1)" onsubmit = " return back()">
+            <form class = "form-horizontal" role = "form" action = "javascript:void(0)" onsubmit = "jump(
+            '#thingAddDiv','html/thingPanel.html')">
                 <!--left-->
                 <div id = "left" style = "width: 370px;height: 390px;float: left;">
                     <!--第一行-->

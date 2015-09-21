@@ -18,7 +18,8 @@
         <!--内容-->
         <div style = "margin-left:50px;margin-top: 10px">
             <!--表单-->
-            <form class = "form-horizontal" role = "form" action = "javascript:history.go(-1)" onsubmit = " return back()">
+            <form class = "form-horizontal" role = "form" action = "javascript:jump(
+            '#mouseAddDiv','html/mousePanel.html')" onsubmit = "return add()">
                 <!--左边-->
                 <div id = "left" style = "width: 370px;height: 390px;float: left">
                     <!--第一行-->
@@ -52,7 +53,7 @@
                                 <input id = "inputImg" type = "text" class = "form-control" style = "width: 150px" />
                             </div>
                             <div class = "col-lg-4 col-sm-4" style = "float: left;margin-left: 10px">
-                                <button class = "btn btn-default" onclick = "browseImg()">浏览</button>
+                                <button class = "btn btn-default" onclick = "browseImg();return false">浏览</button>
                             </div>
                         </div>
                     </div>
@@ -116,6 +117,13 @@
     </div>
 </div>
 <script type = "text/javascript">
+
+    //数据验证
+    function add() {
+        alert("验证数据正确性");
+        return true;
+    }
+
     function browseImg() {
         //调用文件选择组件的默认点击事件
         $("#img").click();
